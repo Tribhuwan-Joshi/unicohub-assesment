@@ -3,27 +3,27 @@ import { useState, useEffect } from "react";
 
 function Links() {
   return (
-    <div className=" hidden md:flex text-lg justify-evenly gap-6 items-center">
+    <div className="  flex text-lg justify-evenly gap-6 items-center">
       <img src={svg} alt="icon" className="mr-10" />
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Product
       </a>
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Team
       </a>
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Enterprise
       </a>
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Explore
       </a>
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Maketplace
       </a>
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Pricing
       </a>
-      <a className="hover:scale-110 transition duration-300 cursor-pointer">
+      <a className="hidden lg:block hover:scale-110 transition duration-300 cursor-pointer">
         Users
       </a>
     </div>
@@ -32,9 +32,9 @@ function Links() {
 
 function Searchbar() {
   return (
-    <div className="flex bg-[#272F43] items-center pr-2 rounded-sm">
+    <div className="hidden md:flex  bg-[#272F43] items-center pr-2 rounded-sm">
       <input
-        className="bg-[#272F43] outline-none w-[230px]  tracking-wide placeholder:text-[#C0C3C9] h-8 p-2 rounded-sm"
+        className="bg-[#272F43] outline-none w-[230px]  tracking-wide placeholder:text-[#C0C3C9] h-6 lg:h-8 p-2 rounded-sm"
         placeholder="Search DOML"
       />
       <svg
@@ -75,7 +75,6 @@ function AuthButtons() {
   );
 }
 
-
 function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -93,7 +92,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed w-full pt-8 pb-8 h-[15px] duration-300 ease-in-out transition text-white py-5 flex items-center justify-evenly ${
+      className={`fixed w-full pt-8   pb-8 h-[12px] lg:h-[15px] duration-500 ease-in-out transition text-white py-5 flex items-center justify-evenly ${
         scrolled ? "bg-gray-900" : "" // Change the background color when scrolled
       }`}
     >
@@ -105,6 +104,5 @@ function Header() {
     </header>
   );
 }
-
 
 export default Header;
