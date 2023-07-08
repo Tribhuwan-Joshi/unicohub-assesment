@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header";
-import Users from "./components/Users";
+import Users from "./components/Users/Users";
 import Main from "./components/Main";
-import { Route,Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/user" element={<Users />} />
+        <Route path="/users" element={<Users />} />
       </Routes>
     </>
   );

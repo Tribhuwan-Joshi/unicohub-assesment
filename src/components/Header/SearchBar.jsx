@@ -1,6 +1,6 @@
 function Searchbar() {
   return (
-    <div className="hidden md:flex  bg-[#272F43] items-center pr-2 rounded-sm">
+    <div className="hidden md:flex  bg-[#272F43] h-max items-center pr-2 rounded-sm">
       <input
         className="bg-[#272F43] outline-none w-[230px]  tracking-wide placeholder:text-[#C0C3C9] h-6 lg:h-8 p-2 rounded-sm"
         placeholder="Search DOML"
