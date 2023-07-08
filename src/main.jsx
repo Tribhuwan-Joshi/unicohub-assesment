@@ -6,7 +6,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="https://tribhuwan-joshi.github.io/unicohub-page">
       <App />
     </BrowserRouter>
   </React.StrictMode>
