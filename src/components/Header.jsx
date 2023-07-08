@@ -1,4 +1,5 @@
 import svg from "/logo.svg";
+import { useState, useEffect } from "react";
 
 function Links() {
   return (
@@ -74,9 +75,28 @@ function AuthButtons() {
   );
 }
 
+
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="mt-4 h-[15px] text-white py-5 flex items-center justify-evenly">
+    <header
+      className={`fixed w-full pt-8 pb-8 h-[15px] duration-300 ease-in-out transition text-white py-5 flex items-center justify-evenly ${
+        scrolled ? "bg-gray-900" : "" // Change the background color when scrolled
+      }`}
+    >
       <Links />
       <div className="flex gap-10">
         <Searchbar />
@@ -85,5 +105,6 @@ function Header() {
     </header>
   );
 }
+
 
 export default Header;
